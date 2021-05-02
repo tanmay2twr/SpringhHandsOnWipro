@@ -1,0 +1,60 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+<bean id="Player1" class="com.wipro.Player">  
+<property name="playerId" value="P001"></property>  
+<property name="playerName" value="Sachin"></property>  
+<property name="country">   
+<ref bean="country1"/>   
+</property>  
+</bean> 
+
+<bean id="Player2" class="com.wipro.Player">  
+<property name="playerId" value="P002"></property>  
+<property name="playerName" value="Rohit"></property>  
+<property name="country">  
+<ref bean="country1"/>  
+</property>  
+</bean> 
+
+<bean id="Player3" class="com.wipro.Player">  
+<property name="playerId" value="P003"></property>  
+<property name="playerName" value="Virat"></property>  
+<property name="country">    
+<ref bean="country2"/>    
+</property>  
+</bean> 
+
+<bean id="Player4" class="com.wipro.Player">  
+<property name="playerId" value="P004"></property>  
+<property name="playerName" value="Bumrah"></property>  
+<property name="country">  
+<ref bean="country2"/>  
+</property>  
+</bean> 
+
+<bean id="Player5" class="com.wipro.Player">  
+<property name="playerId" value="P005"></property>  
+<property name="playerName" value="Dhoni"></property>  
+<property name="country">  
+<ref bean="country2"/>  
+</property>  
+</bean> 
+
+
+
+<bean id="country1" class="com.wipro.Country">
+<property name="countryId" value="C001"></property>
+<property name="countryName" value="India"></property>
+</bean>
+
+<bean id="country2" class="com.wipro.Country">
+<property name="countryId" value="C002"></property>
+<property name="countryName" value="Australia"></property>
+</bean>
+
+</beans>

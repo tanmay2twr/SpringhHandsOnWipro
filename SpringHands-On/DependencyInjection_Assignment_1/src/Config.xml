@@ -1,0 +1,41 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+<bean id="student1" class="com.wipro.Student">  
+<property name="studentId" value="S001"></property>  
+<property name="studentName" value="Steve"></property>  
+<property name="studentTest">  
+<list>  
+<ref bean="test1"/>  
+</list>  
+</property>  
+</bean> 
+
+<bean id="student2" class="com.wipro.Student">  
+<property name="studentId" value="S002"></property>  
+<property name="studentName" value="Tanmay"></property>  
+<property name="studentTest">  
+<list>  
+<ref bean="test1"/>  
+<ref bean="test2"/>  
+</list>  
+</property>  
+</bean> 
+
+<bean id="test1" class="com.wipro.Test">
+<property name="testId" value="T001"></property>
+<property name="testTitle" value="Core Java Test"></property>
+<property name="testMarks" value="80"></property>
+</bean>
+
+<bean id="test2" class="com.wipro.Test">
+<property name="testId" value="T002"></property>
+<property name="testTitle" value="Advanced Java Test"></property>
+<property name="testMarks" value="90"></property>
+</bean>
+
+</beans>
